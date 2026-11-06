@@ -1,0 +1,104 @@
+Theory: spectral radius of the expected extended map (full window)
+  uniform  alpha=0.5: 0.9670  alpha=0.7: 0.9032  alpha=0.9: 0.8092
+  gl_def6  alpha=0.5: 0.8066  alpha=0.7: 0.8171  alpha=0.9: 0.8286
+  gl_abs   alpha=0.5: 1.1085  alpha=0.7: 1.0260  alpha=0.9: 0.9148
+  PSO (alpha=1): 0.8367
+
+median final f (Wilcoxon vs uniform at the same alpha, two-sided, floor 1e-10; Holm within suite x n over 30 tests)
+
+## suite=canonical n=10
+  sphere     PSO 2.28e-26 | a=0.5: uniform 7.73e-11, gl_def6 2.96e-15, gl_abs 4.48e+03 | a=0.7: uniform 3.36e-30, gl_def6 1.05e-48, gl_abs 2.88e+03 | a=0.9: uniform 1.08e-32, gl_def6 1.66e-35, gl_abs 6.75e-09
+  rastrigin  PSO 7.96 | a=0.5: uniform 9.97, gl_def6 38.3, gl_abs 4.59e+03 | a=0.7: uniform 15.9, gl_def6 21.4, gl_abs 3.01e+03 | a=0.9: uniform 10.9, gl_def6 10.9, gl_abs 7.34
+  ackley     PSO 20 | a=0.5: uniform 20, gl_def6 20, gl_abs 20 | a=0.7: uniform 20, gl_def6 20, gl_abs 20 | a=0.9: uniform 20, gl_def6 20, gl_abs 20
+  rosenbrock PSO 6.73 | a=0.5: uniform 5.87, gl_def6 248, gl_abs 2.58e+08 | a=0.7: uniform 5.81, gl_def6 39.4, gl_abs 1e+08 | a=0.9: uniform 4.03, gl_def6 4.67, gl_abs 26.3
+  griewank   PSO 0.0836 | a=0.5: uniform 0.0762, gl_def6 0.106, gl_abs 2.11 | a=0.7: uniform 0.0935, gl_def6 0.124, gl_abs 1.72 | a=0.9: uniform 0.0824, gl_def6 0.091, gl_abs 0.064
+  Holm-significant differences vs uniform: 14/30
+    sphere     alpha=0.5 gl_abs   median 4.48e+03 vs uniform 1e-10  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.7 gl_abs   median 2.88e+03 vs uniform 1e-10  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.9 gl_abs   median 6.75e-09 vs uniform 1e-10  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.5 gl_def6  median 38.3 vs uniform 9.97  p_holm=7.8e-08  (worse)
+    rastrigin  alpha=0.5 gl_abs   median 4.59e+03 vs uniform 9.97  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.7 gl_def6  median 21.4 vs uniform 15.9  p_holm=0.0034  (worse)
+    rastrigin  alpha=0.7 gl_abs   median 3.01e+03 vs uniform 15.9  p_holm=5.6e-08  (worse)
+    ackley     alpha=0.5 gl_def6  median 20 vs uniform 20  p_holm=0.023  (better)
+    ackley     alpha=0.7 gl_def6  median 20 vs uniform 20  p_holm=0.0023  (better)
+    rosenbrock alpha=0.5 gl_abs   median 2.58e+08 vs uniform 5.87  p_holm=5.6e-08  (worse)
+    rosenbrock alpha=0.7 gl_abs   median 1e+08 vs uniform 5.81  p_holm=5.6e-08  (worse)
+    rosenbrock alpha=0.9 gl_abs   median 26.3 vs uniform 4.03  p_holm=0.0022  (worse)
+    griewank   alpha=0.5 gl_abs   median 2.11 vs uniform 0.0762  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.7 gl_abs   median 1.72 vs uniform 0.0935  p_holm=5.6e-08  (worse)
+
+## suite=canonical n=30
+  sphere     PSO 9.38e-05 | a=0.5: uniform 0.0195, gl_def6 1.89e+03, gl_abs 3.5e+04 | a=0.7: uniform 2.08, gl_def6 300, gl_abs 3.35e+04 | a=0.9: uniform 0.0185, gl_def6 0.254, gl_abs 2.16
+  rastrigin  PSO 158 | a=0.5: uniform 228, gl_def6 2.96e+03, gl_abs 3.53e+04 | a=0.7: uniform 417, gl_def6 1.06e+03, gl_abs 3.38e+04 | a=0.9: uniform 300, gl_def6 494, gl_abs 211
+  ackley     PSO 20 | a=0.5: uniform 20, gl_def6 20, gl_abs 20 | a=0.7: uniform 20, gl_def6 20, gl_abs 20 | a=0.9: uniform 20, gl_def6 20, gl_abs 20
+  rosenbrock PSO 448 | a=0.5: uniform 216, gl_def6 2.65e+07, gl_abs 8.74e+09 | a=0.7: uniform 1.73e+03, gl_def6 1.42e+06, gl_abs 8.62e+09 | a=0.9: uniform 210, gl_def6 1.07e+03, gl_abs 1.34e+04
+  griewank   PSO 0.0148 | a=0.5: uniform 0.0223, gl_def6 1.47, gl_abs 9.76 | a=0.7: uniform 0.0854, gl_def6 1.08, gl_abs 9.37 | a=0.9: uniform 0.0345, gl_def6 0.0716, gl_abs 0.21
+  Holm-significant differences vs uniform: 24/30
+    sphere     alpha=0.5 gl_def6  median 1.89e+03 vs uniform 0.0195  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.5 gl_abs   median 3.5e+04 vs uniform 0.0195  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.7 gl_def6  median 300 vs uniform 2.08  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.7 gl_abs   median 3.35e+04 vs uniform 2.08  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.9 gl_abs   median 2.16 vs uniform 0.0185  p_holm=0.0042  (worse)
+    rastrigin  alpha=0.5 gl_def6  median 2.96e+03 vs uniform 228  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.5 gl_abs   median 3.53e+04 vs uniform 228  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.7 gl_def6  median 1.06e+03 vs uniform 417  p_holm=1.5e-05  (worse)
+    rastrigin  alpha=0.7 gl_abs   median 3.38e+04 vs uniform 417  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.9 gl_def6  median 494 vs uniform 300  p_holm=0.033  (worse)
+    ackley     alpha=0.5 gl_abs   median 20 vs uniform 20  p_holm=0.0041  (better)
+    ackley     alpha=0.7 gl_abs   median 20 vs uniform 20  p_holm=0.027  (worse)
+    ackley     alpha=0.9 gl_abs   median 20 vs uniform 20  p_holm=0.02  (worse)
+    rosenbrock alpha=0.5 gl_def6  median 2.65e+07 vs uniform 216  p_holm=6.3e-08  (worse)
+    rosenbrock alpha=0.5 gl_abs   median 8.74e+09 vs uniform 216  p_holm=5.6e-08  (worse)
+    rosenbrock alpha=0.7 gl_def6  median 1.42e+06 vs uniform 1.73e+03  p_holm=1.3e-06  (worse)
+    rosenbrock alpha=0.7 gl_abs   median 8.62e+09 vs uniform 1.73e+03  p_holm=5.6e-08  (worse)
+    rosenbrock alpha=0.9 gl_def6  median 1.07e+03 vs uniform 210  p_holm=0.0095  (worse)
+    rosenbrock alpha=0.9 gl_abs   median 1.34e+04 vs uniform 210  p_holm=2.4e-05  (worse)
+    griewank   alpha=0.5 gl_def6  median 1.47 vs uniform 0.0223  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.5 gl_abs   median 9.76 vs uniform 0.0223  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.7 gl_def6  median 1.08 vs uniform 0.0854  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.7 gl_abs   median 9.37 vs uniform 0.0854  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.9 gl_abs   median 0.21 vs uniform 0.0345  p_holm=7.8e-05  (worse)
+
+## suite=shiftrot n=10
+  sphere     PSO 678 | a=0.5: uniform 1.61e-11, gl_def6 1.1e-05, gl_abs 4.15e+03 | a=0.7: uniform 9.86e-32, gl_def6 0, gl_abs 2.14e+03 | a=0.9: uniform 678, gl_def6 678, gl_abs 1.05e-07
+  rastrigin  PSO 275 | a=0.5: uniform 22.4, gl_def6 58.7, gl_abs 3.15e+03 | a=0.7: uniform 25.4, gl_def6 43.3, gl_abs 2.13e+03 | a=0.9: uniform 26.9, gl_def6 53.2, gl_abs 29.4
+  ackley     PSO 20.4 | a=0.5: uniform 20.3, gl_def6 20.1, gl_abs 20.5 | a=0.7: uniform 20.2, gl_def6 20.1, gl_abs 20.5 | a=0.9: uniform 20.4, gl_def6 20.3, gl_abs 20.4
+  rosenbrock PSO 1.24e+04 | a=0.5: uniform 504, gl_def6 1.25e+04, gl_abs 1.38e+08 | a=0.7: uniform 5.98e+03, gl_def6 6.04e+03, gl_abs 4.02e+07 | a=0.9: uniform 1e+04, gl_def6 1.48e+03, gl_abs 1.25e+04
+  griewank   PSO 0.08 | a=0.5: uniform 0.0959, gl_def6 0.107, gl_abs 2.11 | a=0.7: uniform 0.0923, gl_def6 0.103, gl_abs 1.51 | a=0.9: uniform 0.126, gl_def6 0.188, gl_abs 0.107
+  Holm-significant differences vs uniform: 12/30
+    sphere     alpha=0.5 gl_def6  median 1.1e-05 vs uniform 1e-10  p_holm=0.0093  (worse)
+    sphere     alpha=0.5 gl_abs   median 4.15e+03 vs uniform 1e-10  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.7 gl_abs   median 2.14e+03 vs uniform 1e-10  p_holm=8.1e-07  (worse)
+    rastrigin  alpha=0.5 gl_abs   median 3.15e+03 vs uniform 22.4  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.7 gl_abs   median 2.13e+03 vs uniform 25.4  p_holm=5.6e-08  (worse)
+    ackley     alpha=0.5 gl_def6  median 20.1 vs uniform 20.3  p_holm=1.8e-06  (better)
+    ackley     alpha=0.5 gl_abs   median 20.5 vs uniform 20.3  p_holm=0.0034  (worse)
+    ackley     alpha=0.7 gl_abs   median 20.5 vs uniform 20.2  p_holm=2.2e-06  (worse)
+    rosenbrock alpha=0.5 gl_abs   median 1.38e+08 vs uniform 504  p_holm=5.6e-08  (worse)
+    rosenbrock alpha=0.7 gl_abs   median 4.02e+07 vs uniform 5.98e+03  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.5 gl_abs   median 2.11 vs uniform 0.0959  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.7 gl_abs   median 1.51 vs uniform 0.0923  p_holm=5.6e-08  (worse)
+
+## suite=shiftrot n=30
+  sphere     PSO 6.78e+03 | a=0.5: uniform 1.58e+03, gl_def6 5.98e+03, gl_abs 4.56e+04 | a=0.7: uniform 2.52e+03, gl_def6 4.45e+03, gl_abs 2.78e+04 | a=0.9: uniform 7.13e+03, gl_def6 4.68e+03, gl_abs 6.35e+03
+  rastrigin  PSO 5.35e+03 | a=0.5: uniform 931, gl_def6 6.65e+03, gl_abs 5.13e+04 | a=0.7: uniform 2.19e+03, gl_def6 3.68e+03, gl_abs 3.28e+04 | a=0.9: uniform 4.81e+03, gl_def6 5.4e+03, gl_abs 4.14e+03
+  ackley     PSO 21.1 | a=0.5: uniform 21, gl_def6 20.9, gl_abs 21.1 | a=0.7: uniform 21, gl_def6 20.9, gl_abs 21.1 | a=0.9: uniform 21, gl_def6 21, gl_abs 21.1
+  rosenbrock PSO 2.36e+07 | a=0.5: uniform 1.08e+07, gl_def6 4.61e+08, gl_abs 2.08e+10 | a=0.7: uniform 2.41e+07, gl_def6 8.79e+07, gl_abs 8.26e+09 | a=0.9: uniform 2.65e+07, gl_def6 6.33e+07, gl_abs 6.15e+07
+  griewank   PSO 2.1 | a=0.5: uniform 0.833, gl_def6 2.24, gl_abs 14.5 | a=0.7: uniform 1.54, gl_def6 1.57, gl_abs 10.2 | a=0.9: uniform 1.66, gl_def6 1.61, gl_abs 1.92
+  Holm-significant differences vs uniform: 15/30
+    sphere     alpha=0.5 gl_def6  median 5.98e+03 vs uniform 1.58e+03  p_holm=5.2e-05  (worse)
+    sphere     alpha=0.5 gl_abs   median 4.56e+04 vs uniform 1.58e+03  p_holm=5.6e-08  (worse)
+    sphere     alpha=0.7 gl_abs   median 2.78e+04 vs uniform 2.52e+03  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.5 gl_def6  median 6.65e+03 vs uniform 931  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.5 gl_abs   median 5.13e+04 vs uniform 931  p_holm=5.6e-08  (worse)
+    rastrigin  alpha=0.7 gl_abs   median 3.28e+04 vs uniform 2.19e+03  p_holm=5.6e-08  (worse)
+    ackley     alpha=0.5 gl_def6  median 20.9 vs uniform 21  p_holm=0.048  (better)
+    ackley     alpha=0.5 gl_abs   median 21.1 vs uniform 21  p_holm=0.0048  (worse)
+    ackley     alpha=0.7 gl_abs   median 21.1 vs uniform 21  p_holm=0.00025  (worse)
+    rosenbrock alpha=0.5 gl_def6  median 4.61e+08 vs uniform 1.08e+07  p_holm=7.8e-08  (worse)
+    rosenbrock alpha=0.5 gl_abs   median 2.08e+10 vs uniform 1.08e+07  p_holm=5.6e-08  (worse)
+    rosenbrock alpha=0.7 gl_abs   median 8.26e+09 vs uniform 2.41e+07  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.5 gl_def6  median 2.24 vs uniform 0.833  p_holm=5.2e-07  (worse)
+    griewank   alpha=0.5 gl_abs   median 14.5 vs uniform 0.833  p_holm=5.6e-08  (worse)
+    griewank   alpha=0.7 gl_abs   median 10.2 vs uniform 1.54  p_holm=5.6e-08  (worse)

@@ -1,0 +1,83 @@
+Table 5
+  PSO           9.11\times10^{-26}\pm2.85\times10^{-25}    best 3.10\times10^{-28}     SR 100.0
+  FO-PSO(0.9)   1.05\times10^{-31}\pm2.52\times10^{-31}    best 1.79\times10^{-33}     SR 100.0
+  JAYA          2.29\times10^{-9}\pm1.65\times10^{-9}      best 4.03\times10^{-10}     SR 100.0
+  FO-JAYA(0.5)  1.61\times10^{-185}\pm5.10\times10^{-185}  best 3.45\times10^{-188}    SR 100.0
+  WFO           1.24\times10^{-18}\pm1.48\times10^{-18}    best 1.18\times10^{-20}     SR 100.0
+  FO-WFO(0.5)   1.44\times10^{-221}\pm8.09\times10^{-222}  best 4.50\times10^{-222}    SR 100.0
+  ACOR          1.38\times10^{-58}\pm2.90\times10^{-58}    best 1.79\times10^{-63}     SR 100.0
+  FO-ACOR(0.5)  3.33\times10^{-270}\pm7.85\times10^{-270}  best 1.93\times10^{-273}    SR 100.0
+Table 6
+  PSO           9.19\pm5.39                                best 1.99                   SR 0.0
+  FO-PSO(0.9)   11.67\pm6.43                               best 1.99                   SR 0.0
+  JAYA          40.37\pm7.88                               best 19.62                  SR 0.0
+  FO-JAYA(0.5)  0\pm0                                      best 0                      SR 100.0
+  WFO           4.74\times10^{-16}\pm2.59\times10^{-15}    best 0                      SR 100.0
+  FO-WFO(0.5)   0\pm0                                      best 0                      SR 100.0
+  ACOR          18.87\pm11.83                              best 3.98                   SR 0.0
+  FO-ACOR(0.5)  0\pm0                                      best 0                      SR 100.0
+Table 7
+  PSO           20.00\pm8.23\times10^{-3}                  best 20.00                  SR 0.0
+  FO-PSO(0.9)   19.33\pm3.65                               best 4.00\times10^{-15}     SR 3.3
+  JAYA          20.00\pm7.31\times10^{-3}                  best 20.00                  SR 0.0
+  FO-JAYA(0.5)  0.40\pm2.16                                best 4.44\times10^{-16}     SR 96.7
+  WFO           18.66\pm5.07                               best 1.97\times10^{-3}      SR 0.0
+  FO-WFO(0.5)   6.81\times10^{-16}\pm9.01\times10^{-16}    best 4.44\times10^{-16}     SR 100.0
+  ACOR          20.09\pm0.09                               best 20.00                  SR 0.0
+  FO-ACOR(0.5)  1.98\times10^{-15}\pm1.79\times10^{-15}    best 4.44\times10^{-16}     SR 100.0
+Table 8
+  PSO           167697.58\pm378594.04                      best 1.87\times10^{-4}      SR 0.0
+  FO-PSO(0.9)   67396.12\pm253524.32                       best 4.73\times10^{-3}      SR 0.0
+  JAYA          109.71\pm203.27                            best 0.37                   SR 0.0
+  FO-JAYA(0.5)  8.90\pm0.06                                best 8.70                   SR 0.0
+  WFO           1.06\pm1.71                                best 1.82\times10^{-3}      SR 0.0
+  FO-WFO(0.5)   8.94\pm0.02                                best 8.89                   SR 0.0
+  ACOR          15.84\pm55.33                              best 3.49\times10^{-3}      SR 0.0
+  FO-ACOR(0.5)  8.84\pm0.10                                best 8.60                   SR 0.0
+Table 9
+  PSO           0.09\pm0.04                                best 0.04                   SR 0.0
+  FO-PSO(0.9)   0.09\pm0.06                                best 0                      SR 3.3
+  JAYA          0.56\pm0.13                                best 0.30                   SR 0.0
+  FO-JAYA(0.5)  0\pm0                                      best 0                      SR 100.0
+  WFO           3.38\times10^{-3}\pm7.35\times10^{-3}      best 5.55\times10^{-16}     SR 80.0
+  FO-WFO(0.5)   0\pm0                                      best 0                      SR 100.0
+  ACOR          0.10\pm0.09                                best 9.86\times10^{-3}      SR 0.0
+  FO-ACOR(0.5)  0\pm0                                      best 0                      SR 100.0
+Table 10
+  PSO           0.049 -
+  FO-PSO(0.9)   0.053 +6.6%
+  JAYA          0.103 -
+  FO-JAYA(0.5)  0.222 +116.4%
+  WFO           0.117 -
+  FO-WFO(0.5)   0.253 +117.4%
+  ACOR          0.338 -
+  FO-ACOR(0.5)  0.476 +40.5%
+Table 11 (Holm-adjusted)
+  PSO vs FO-PSO(0.9)     sphere: 1.000 ns | rastrigin: 1.000 ns | ackley: 1.000 ns | rosenbrock: 1.000 ns | griewank: 1.000 ns
+  JAYA vs FO-JAYA(0.5)   sphere: < 0.001 (+) | rastrigin: < 0.001 (+) | ackley: < 0.001 (+) | rosenbrock: 0.010 (+) | griewank: < 0.001 (+)
+  WFO vs FO-WFO(0.5)     sphere: 1.000 ns | rastrigin: 1.000 ns | ackley: < 0.001 (+) | rosenbrock: < 0.001 (-) | griewank: 0.632 ns
+  ACOR vs FO-ACOR(0.5)   sphere: 1.000 ns | rastrigin: < 0.001 (+) | ackley: < 0.001 (+) | rosenbrock: 0.022 (-) | griewank: < 0.001 (+)
+Table 12 Friedman chi2=456.00 p=2.28e-94
+  FO-ACOR(0.5)  3.14
+  WFO           3.20
+  FO-JAYA(0.5)  3.33
+  FO-WFO(0.5)   3.42
+  FO-PSO(0.9)   5.08
+  PSO           5.26
+  ACOR          5.46
+  JAYA          7.11
+Per-function Friedman
+  sphere     chi2=210.0 p=8.7e-42
+  rastrigin  chi2=198.8 p=2.1e-39
+  ackley     chi2=182.9 p=4.8e-36
+  rosenbrock chi2=88.1 p=3.1e-16
+  griewank   chi2=194.6 p=1.6e-38
+Table 13
+  PSO           sphere|30: 9.38\times10^{-5} [1.14\times10^{-5}, 2.46\times10^{-4}] (0%) | sphere|50: 29.83 [7.19, 10001.00] (0%) | rastrigin|30: 157.72 [98.61, 222.63] (0%) | rastrigin|50: 1699.72 [844.19, 10832.00] (0%)
+  JAYA          sphere|30: 3.86 [2.63, 5.19] (0%) | sphere|50: 306.48 [243.17, 395.52] (0%) | rastrigin|30: 303.37 [283.98, 328.41] (0%) | rastrigin|50: 866.12 [809.02, 933.00] (0%)
+  WFO           sphere|30: 5.70\times10^{-3} [3.00\times10^{-3}, 7.89\times10^{-3}] (0%) | sphere|50: 3.27 [2.79, 4.03] (0%) | rastrigin|30: 0.50 [0.24, 0.72] (100%) | rastrigin|50: 117.13 [101.11, 148.53] (0%)
+  ACOR          sphere|30: 5.31\times10^{-14} [1.20\times10^{-14}, 1.42\times10^{-13}] (100%) | sphere|50: 2.81\times10^{-4} [1.56\times10^{-4}, 9.40\times10^{-4}] (0%) | rastrigin|30: 152.73 [128.35, 233.07] (0%) | rastrigin|50: 706.90 [478.57, 813.85] (0%)
+  FO-JAYA(0.5)  sphere|30: 3.04\times10^{-185} [7.68\times10^{-186}, 1.58\times10^{-184}] (100%) | sphere|50: 7.97\times10^{-185} [3.47\times10^{-185}, 4.85\times10^{-184}] (100%) | rastrigin|30: 0 [0, 0] (100%) | rastrigin|50: 0 [0, 0] (100%)
+  FO-WFO(0.5)   sphere|30: 3.02\times10^{-218} [2.42\times10^{-218}, 3.83\times10^{-218}] (100%) | sphere|50: 1.27\times10^{-217} [9.17\times10^{-218}, 1.69\times10^{-217}] (100%) | rastrigin|30: 0 [0, 0] (100%) | rastrigin|50: 0 [0, 0] (100%)
+  FO-ACOR(0.5)  sphere|30: 1.04\times10^{-238} [4.85\times10^{-239}, 3.24\times10^{-238}] (100%) | sphere|50: 1.04\times10^{-229} [7.91\times10^{-230}, 1.93\times10^{-229}] (100%) | rastrigin|30: 0 [0, 0] (100%) | rastrigin|50: 0 [0, 0] (100%)
+  FO-PSO(0.9)   sphere|30: 0.02 [5.57\times10^{-4}, 0.18] (0%) | sphere|50: 590.76 [165.49, 1758.56] (0%) | rastrigin|30: 300.45 [225.50, 392.05] (0%) | rastrigin|50: 2974.38 [1743.58, 7559.26] (0%)

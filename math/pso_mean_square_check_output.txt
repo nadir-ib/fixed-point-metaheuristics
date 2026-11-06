@@ -1,0 +1,4 @@
+alpha=1.0 memoryless                       mean-map rho(E B) = 0.8367 | mean-square sqrt(rho(E[B(x)B])) = 0.9568 | a.s. exp(lyap) = 0.8911
+alpha=0.9 with velocity memory (FO-PSO)    mean-map rho(E B) = 0.8092 | mean-square sqrt(rho(E[B(x)B])) = 0.9374 | a.s. exp(lyap) = 0.8769
+alpha=0.7 with velocity memory             mean-map rho(E B) = 0.9032 | mean-square sqrt(rho(E[B(x)B])) = 0.9376 | a.s. exp(lyap) = 0.9123
+alpha=0.5 with velocity memory             mean-map rho(E B) = 0.9670 | mean-square sqrt(rho(E[B(x)B])) = 0.9839 | a.s. exp(lyap) = 0.9739

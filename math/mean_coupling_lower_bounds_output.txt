@@ -1,0 +1,5 @@
+Lbar eigenvalues: [0.935611 0.937833]   L_W = 0.9570
+alpha=0.5: FO-JAYA bracket [0.5971, 0.6816]   FO-WFO bracket [0.5894, 0.6704]
+alpha=0.7: FO-JAYA bracket [0.6503, 0.7760]   FO-WFO bracket [0.5812, 0.7502]
+alpha=0.9: FO-JAYA bracket [0.8988, 0.9209]   FO-WFO bracket [0.8418, 0.8828]
+alpha=1.0: FO-JAYA q_J = 1 (no contraction)   FO-WFO bracket [0.9378, 0.9570]

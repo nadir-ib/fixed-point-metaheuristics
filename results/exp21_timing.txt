@@ -1,0 +1,12 @@
+Part A: mean wall-clock seconds per run (serial)
+  n=10: PSO 0.049, FO-PSO(0.9) 0.053, JAYA 0.103, FO-JAYA(0.5) 0.222, WFO 0.117, FO-WFO(0.5) 0.253, ACOR 0.338, FO-ACOR(0.5) 0.476
+         overhead: FO-PSO(0.9) +6.6%, FO-JAYA(0.5) +116.4%, FO-WFO(0.5) +117.4%, FO-ACOR(0.5) +40.5%
+  n=30: PSO 0.054, FO-PSO(0.9) 0.059, JAYA 0.108, FO-JAYA(0.5) 0.229, WFO 0.118, FO-WFO(0.5) 0.257, ACOR 0.400, FO-ACOR(0.5) 0.538
+         overhead: FO-PSO(0.9) +9.5%, FO-JAYA(0.5) +110.8%, FO-WFO(0.5) +117.7%, FO-ACOR(0.5) +34.4%
+  n=50: PSO 0.058, FO-PSO(0.9) 0.065, JAYA 0.114, FO-JAYA(0.5) 0.233, WFO 0.119, FO-WFO(0.5) 0.258, ACOR 0.461, FO-ACOR(0.5) 0.600
+         overhead: FO-PSO(0.9) +10.9%, FO-JAYA(0.5) +104.4%, FO-WFO(0.5) +115.6%, FO-ACOR(0.5) +30.2%
+
+Part B: GL memory term for a population (N=30, M=10), median microseconds per call
+  n=10: loop 211.1 us, vectorised 3.4 us, speed-up x62 (results agree to 1e-12)
+  n=30: loop 211.8 us, vectorised 4.0 us, speed-up x53 (results agree to 1e-12)
+  n=50: loop 213.0 us, vectorised 4.7 us, speed-up x46 (results agree to 1e-12)

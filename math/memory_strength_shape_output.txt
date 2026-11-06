@@ -1,0 +1,3 @@
+h(0+) = 0.1000 (= 1/M), max h = 0.1161 at alpha = 0.1931
+strictly increasing on (0, alpha*): True
+strictly decreasing on (alpha*, 1): True

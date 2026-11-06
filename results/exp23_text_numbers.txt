@@ -1,0 +1,59 @@
+A. Holm-significant FO-vs-baseline comparisons (of 20), Friedman (150 blocks), floor 1e-10
+  canonical n=10: sig 11 (FO better 9, baseline better 2); Friedman chi2=456.00 p=2.3e-94; best ranks [('FO-ACOR(0.5)', 3.14), ('WFO', 3.2), ('FO-JAYA(0.5)', 3.33)]; worst [('PSO', 5.26), ('ACOR', 5.46), ('JAYA', 7.11)]
+  canonical n=30: sig 16 (FO better 14, baseline better 2); Friedman chi2=739.26 p=2.4e-155; best ranks [('FO-ACOR(0.5)', 2.1), ('FO-JAYA(0.5)', 2.34), ('FO-WFO(0.5)', 2.34)]; worst [('PSO', 5.55), ('FO-PSO(0.9)', 6.1), ('JAYA', 7.39)]
+  canonical n=50: sig 16 (FO better 15, baseline better 1); Friedman chi2=821.98 p=3.3e-173; best ranks [('FO-ACOR(0.5)', 1.83), ('FO-WFO(0.5)', 2.14), ('FO-JAYA(0.5)', 2.26)]; worst [('PSO', 6.17), ('FO-PSO(0.9)', 6.78), ('JAYA', 6.84)]
+  shift     n=10: sig 14 (FO better 1, baseline better 13); Friedman chi2=738.40 p=3.6e-155; best ranks [('ACOR', 2.56), ('WFO', 2.57), ('FO-PSO(0.9)', 2.78)]; worst [('FO-JAYA(0.5)', 5.96), ('FO-ACOR(0.5)', 6.6), ('FO-WFO(0.5)', 7.61)]
+  shift     n=30: sig 13 (FO better 0, baseline better 13); Friedman chi2=822.20 p=3e-173; best ranks [('WFO', 1.99), ('ACOR', 1.99), ('FO-PSO(0.9)', 3.25)]; worst [('FO-JAYA(0.5)', 6.13), ('FO-ACOR(0.5)', 6.54), ('FO-WFO(0.5)', 7.84)]
+  shift     n=50: sig 16 (FO better 1, baseline better 15); Friedman chi2=881.08 p=5.8e-186; best ranks [('WFO', 1.69), ('ACOR', 2.07), ('FO-PSO(0.9)', 3.25)]; worst [('FO-JAYA(0.5)', 6.27), ('FO-ACOR(0.5)', 6.65), ('FO-WFO(0.5)', 7.89)]
+  shiftrot  n=10: sig 12 (FO better 0, baseline better 12); Friedman chi2=621.71 p=5.1e-130; best ranks [('ACOR', 2.46), ('FO-PSO(0.9)', 2.9), ('WFO', 3.01)]; worst [('FO-JAYA(0.5)', 5.97), ('FO-ACOR(0.5)', 6.49), ('FO-WFO(0.5)', 7.32)]
+  shiftrot  n=30: sig 13 (FO better 0, baseline better 13); Friedman chi2=674.32 p=2.4e-141; best ranks [('ACOR', 2.01), ('WFO', 2.3), ('FO-PSO(0.9)', 3.35)]; worst [('FO-JAYA(0.5)', 5.99), ('FO-ACOR(0.5)', 6.41), ('FO-WFO(0.5)', 7.37)]
+  shiftrot  n=50: sig 13 (FO better 0, baseline better 13); Friedman chi2=721.87 p=1.3e-151; best ranks [('WFO', 2.01), ('ACOR', 2.13), ('FO-PSO(0.9)', 3.53)]; worst [('FO-JAYA(0.5)', 5.97), ('FO-ACOR(0.5)', 6.51), ('FO-WFO(0.5)', 7.48)]
+  convdomain n=10: sig 11 (FO better 8, baseline better 3); Friedman chi2=330.60 p=1.7e-67; best ranks [('WFO', 3.48), ('FO-ACOR(0.5)', 3.56), ('FO-JAYA(0.5)', 3.64)]
+  convdomain n=30: sig 15 (FO better 14, baseline better 1); Friedman chi2=772.71 p=1.4e-162; best ranks [('FO-ACOR(0.5)', 2.12), ('FO-JAYA(0.5)', 2.26), ('FO-WFO(0.5)', 2.42)]
+  convdomain n=50: sig 16 (FO better 15, baseline better 1); Friedman chi2=886.75 p=3.5e-187; best ranks [('FO-ACOR(0.5)', 1.85), ('FO-JAYA(0.5)', 1.97), ('FO-WFO(0.5)', 2.18)]
+
+B. Rank-biserial effect sizes, canonical n=10 (floor 1e-10); r > 0: FO variant better
+  sphere     FO-PSO(0.9) +0.00 | FO-JAYA(0.5) +1.00 | FO-WFO(0.5) +0.00 | FO-ACOR(0.5) +0.00
+  rastrigin  FO-PSO(0.9) -0.32 | FO-JAYA(0.5) +1.00 | FO-WFO(0.5) +0.00 | FO-ACOR(0.5) +1.00
+  ackley     FO-PSO(0.9) +0.34 | FO-JAYA(0.5) +1.00 | FO-WFO(0.5) +1.00 | FO-ACOR(0.5) +1.00
+  rosenbrock FO-PSO(0.9) +0.28 | FO-JAYA(0.5) +0.66 | FO-WFO(0.5) -1.00 | FO-ACOR(0.5) -0.62
+  griewank   FO-PSO(0.9) -0.01 | FO-JAYA(0.5) +1.00 | FO-WFO(0.5) +1.00 | FO-ACOR(0.5) +1.00
+  |r| > 0.5: 12 of 20 (10 FO better, 2 baseline better)
+
+C. Selected ratios (canonical n=10, means)
+  Sphere ACOR/FO-ACOR mean ratio: 10^211.6
+  Sphere PSO/FO-PSO mean ratio: 8.68e+05 (PSO 9.11e-26, FO-PSO 1.05e-31)
+  Rosenbrock means: WFO 1.06, FO-WFO 8.94, JAYA mean Rastrigin 40.37
+  PSO Sphere mean n=50: 3394, median 29.83; runs >= 1e4: 10/30
+
+D. FO-PSO rate check (Sphere, canonical n=10, iterations 10..149, floor 1e-30, per-run log-linear fit)
+  FO-PSO(0.9)  decay ratio mean 0.847 +- 0.007 (sd over runs, ddof=0)
+  PSO          decay ratio mean 0.872 +- 0.006 (sd over runs, ddof=0)
+
+E. Centre-bias probe exp19 (median lambda; kappa)
+  FO-PSO   alpha=0.3: lambda 1.111  (kappa 0.309, tau 0.328)
+  FO-PSO   alpha=0.5: lambda 1.000  (kappa 0.505, tau 0.509)
+  FO-PSO   alpha=0.7: lambda 1.000  (kappa 0.701, tau 0.702)
+  FO-PSO   alpha=0.9: lambda 1.087  (kappa 0.900, tau 0.900)
+  FO-PSO   alpha=1.0: lambda 1.087  (kappa 1.000, tau 1.000)
+  FO-JAYA  alpha=0.3: lambda 0.609  (kappa 0.309, tau 0.328)
+  FO-JAYA  alpha=0.5: lambda 0.621  (kappa 0.505, tau 0.509)
+  FO-JAYA  alpha=0.7: lambda 0.816  (kappa 0.701, tau 0.702)
+  FO-JAYA  alpha=0.9: lambda 0.935  (kappa 0.900, tau 0.900)
+  FO-JAYA  alpha=1.0: lambda 0.995  (kappa 1.000, tau 1.000)
+  FO-WFO   alpha=0.3: lambda 0.489  (kappa 0.309, tau 0.328)
+  FO-WFO   alpha=0.5: lambda 0.436  (kappa 0.505, tau 0.509)
+  FO-WFO   alpha=0.7: lambda 0.615  (kappa 0.701, tau 0.702)
+  FO-WFO   alpha=0.9: lambda 0.925  (kappa 0.900, tau 0.900)
+  FO-WFO   alpha=1.0: lambda 1.000  (kappa 1.000, tau 1.000)
+  FO-ACOR  alpha=0.3: lambda 0.369  (kappa 0.309, tau 0.328)
+  FO-ACOR  alpha=0.5: lambda 0.551  (kappa 0.505, tau 0.509)
+  FO-ACOR  alpha=0.7: lambda 0.658  (kappa 0.701, tau 0.702)
+  FO-ACOR  alpha=0.9: lambda 0.874  (kappa 0.900, tau 0.900)
+  FO-ACOR  alpha=1.0: lambda 1.000  (kappa 1.000, tau 1.000)
+
+F. FO-PSO instability ablation (canonical Sphere, n=10, 30 runs): median final f
+  alpha=0.9: 1.08e-32 (exp22)
+  alpha=0.5: 7.73e-11 (exp22)
+  alpha=0.35: 0.019 (computed here)
+  alpha=0.3: 2.08e+03 (computed here)

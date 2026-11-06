@@ -1,0 +1,21 @@
+C1. alpha=1 expected system: Trelea triangle + sqrt(w) oscillatory rate
+   w=0.7, c1=c2=1.5: eig=[0.1+0.8307j 0.1-0.8307j]  |lambda|=0.8367  sqrt(w)=0.8367  (complex => oscillatory)
+   in 0<w<1: eigenvalue-stability == (0<phi<2(1+w)) : True (mismatches=0/40000)
+   => PASS
+
+C2. Multiplicative-noise honesty check: mean-square rate vs expected-value
+   expected-value rate rho(E[A]) = 0.8367 (= sqrt(w) = 0.8367)
+   TRUE mean-square: rho(E[A⊗A]) = 0.9155  => RMS rate = 0.9568
+   mean-square stable? True   (RMS rate <1)
+   exact second-moment recursion: RMS rate = 0.9568  (matches sqrt(rho(E[A(x)A])) = 0.9568)
+   almost-sure (Lyapunov) rate, 400000 steps = 0.8906  (a different mode; not a mean-square rate)
+   => expected-value sqrt(w)=0.8367 UNDERSTATES the mean-square rate 0.9568 by 14.4%
+
+C3. alpha-dependence of the extended expected-value rate (uniform velocity memory)
+   alpha=1.0: rho(augmented E-system)=0.8367  sqrt(w)=0.8367
+   alpha=0.9: rho(augmented E-system)=0.8092  sqrt(w)=0.8367
+   alpha=0.7: rho(augmented E-system)=0.9032  sqrt(w)=0.8367
+   alpha=0.5: rho(augmented E-system)=0.9670  sqrt(w)=0.8367
+   alpha=0.3: rho(augmented E-system)=1.0219  sqrt(w)=0.8367
+   (Thm 2(iv), R1: the extended mean-map rate DEPENDS on alpha: 0.809/0.903/0.967 at 0.9/0.7/0.5; unstable below ~0.33)
+
