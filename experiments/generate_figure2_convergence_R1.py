@@ -1,6 +1,6 @@
 """
 Figure 2 (R1): median best-so-far convergence (30 runs, IQR band) from the R1 benchmark (exp18, code v2), n = 10.
-Top row: canonical suite (optimum at the origin, the centre of [-100,100]^n). Bottom row: shifted and rotated suite
+Top row: canonical suite (standard form; optimum at the origin, at (1,...,1) for Rosenbrock). Bottom row: shifted and rotated suite
 (same functions, optimum moved to o ~ U[-80,80]^n, random rotation). Same three baseline/FO pairs as the submitted
 Figure 2. Annotations are computed from the data (median final values), not typed in.
 Run from repo root: python3 generate_figure2_convergence_R1.py results/data/exp18_r1_20261106_090957.npz
@@ -17,7 +17,7 @@ FLOOR = 1e-35
 z = np.load(NPZ)
 PAIRS = [('sphere', 'PSO', 'FO-PSO(0.9)', 'Sphere'), ('rastrigin', 'JAYA', 'FO-JAYA(0.5)', 'Rastrigin'),
          ('rosenbrock', 'WFO', 'FO-WFO(0.5)', 'Rosenbrock')]
-ROWS = [('canonical', 'optimum at the origin'), ('shiftrot', 'shifted and rotated')]
+ROWS = [('canonical', 'standard form'), ('shiftrot', 'shifted and rotated')]  # C008: Rosenbrock's optimum is (1,...,1)
 BASE_C, FO_C = '#0072B2', '#D55E00'
 fig, axes = plt.subplots(2, 3, figsize=(15, 8.6))
 report = []

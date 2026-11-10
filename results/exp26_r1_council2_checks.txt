@@ -1,0 +1,39 @@
+A. Friedman test with the five functions as blocks; Iman-Davenport F, df (7, 28)
+  canonical  n=10: chi2=16.67 p=0.0197 | F_ID=3.64 p=0.00651 | best [('WFO', 3.2), ('FO-ACOR(0.5)', 3.2), ('FO-JAYA(0.5)', 3.4)] worst [('PSO', 5.2), ('ACOR', 5.2), ('JAYA', 7.6)]
+  canonical  n=30: chi2=28.83 p=0.000155 | F_ID=18.69 p=5.3e-09 | best [('FO-ACOR(0.5)', 1.9), ('FO-JAYA(0.5)', 2.1), ('FO-WFO(0.5)', 2.3)] worst [('PSO', 5.8), ('FO-PSO(0.9)', 6.2), ('JAYA', 7.7)]
+  canonical  n=50: chi2=29.79 p=0.000104 | F_ID=22.87 p=5.35e-10 | best [('FO-ACOR(0.5)', 1.8), ('FO-JAYA(0.5)', 2.0), ('FO-WFO(0.5)', 2.2)] worst [('PSO', 6.1), ('FO-PSO(0.9)', 7.0), ('JAYA', 7.0)]
+  shift      n=10: chi2=25.38 p=0.00065 | F_ID=10.55 p=1.99e-06 | best [('ACOR', 2.0), ('FO-PSO(0.9)', 2.7), ('WFO', 3.0)] worst [('FO-JAYA(0.5)', 5.8), ('FO-ACOR(0.5)', 6.4), ('FO-WFO(0.5)', 7.8)]
+  shift      n=30: chi2=29.67 p=0.000109 | F_ID=22.25 p=7.33e-10 | best [('WFO', 1.8), ('ACOR', 2.0), ('FO-PSO(0.9)', 3.0)] worst [('FO-JAYA(0.5)', 6.2), ('FO-ACOR(0.5)', 6.4), ('FO-WFO(0.5)', 8.0)]
+  shift      n=50: chi2=31.80 p=4.42e-05 | F_ID=39.75 p=6.75e-13 | best [('WFO', 1.8), ('ACOR', 1.8), ('FO-PSO(0.9)', 2.8)] worst [('FO-JAYA(0.5)', 6.2), ('FO-ACOR(0.5)', 6.8), ('FO-WFO(0.5)', 8.0)]
+  shiftrot   n=10: chi2=25.00 p=0.000759 | F_ID=10.00 p=3.29e-06 | best [('ACOR', 2.4), ('FO-PSO(0.9)', 2.6), ('WFO', 2.6)] worst [('FO-JAYA(0.5)', 5.8), ('FO-ACOR(0.5)', 6.4), ('FO-WFO(0.5)', 7.8)]
+  shiftrot   n=30: chi2=25.13 p=0.000719 | F_ID=10.19 p=2.76e-06 | best [('WFO', 2.0), ('ACOR', 2.2), ('FO-PSO(0.9)', 3.0)] worst [('FO-JAYA(0.5)', 6.0), ('FO-ACOR(0.5)', 6.6), ('FO-WFO(0.5)', 7.2)]
+  shiftrot   n=50: chi2=29.60 p=0.000112 | F_ID=21.93 p=8.68e-10 | best [('WFO', 1.8), ('ACOR', 2.0), ('PSO', 3.2)] worst [('FO-JAYA(0.5)', 5.6), ('FO-ACOR(0.5)', 6.8), ('FO-WFO(0.5)', 7.8)]
+  convdomain n=10: chi2=10.99 p=0.139 | F_ID=1.83 p=0.121 | best [('WFO', 3.4), ('FO-ACOR(0.5)', 3.7), ('FO-JAYA(0.5)', 3.9)] worst [('ACOR', 4.5), ('FO-PSO(0.9)', 4.7), ('JAYA', 7.2)]
+  convdomain n=30: chi2=29.86 p=0.000101 | F_ID=23.26 p=4.39e-10 | best [('FO-ACOR(0.5)', 1.9), ('FO-JAYA(0.5)', 2.1), ('FO-WFO(0.5)', 2.3)] worst [('PSO', 5.8), ('FO-PSO(0.9)', 7.0), ('JAYA', 7.4)]
+  convdomain n=50: chi2=29.80 p=0.000103 | F_ID=22.93 p=5.17e-10 | best [('FO-ACOR(0.5)', 1.8), ('FO-JAYA(0.5)', 2.0), ('FO-WFO(0.5)', 2.2)] worst [('PSO', 6.0), ('FO-PSO(0.9)', 7.0), ('JAYA', 7.0)]
+
+B. FO-PSO linearised stochastic system: almost-sure rate, 20 products x 200,000 steps
+  alpha=0.9 with velocity memory   rate 0.8765, 95% CI [0.8763, 0.8768]
+  alpha=1.0 memoryless             rate 0.8908, 95% CI [0.8906, 0.8909]
+
+C. Memory weight on the past states only, (1-alpha)(A_M - 1)/M, M = 10
+  maximum 0.0436 at alpha = 0.373; at alpha 0.3/0.5/0.7/0.9: 0.0424, 0.0407, 0.0279, 0.0099
+
+D. L_W of Theorem 4 (p_l = 0.25, p_e = 0.2, N = 30)
+  n=10: L_W = 0.9570
+  n=30: L_W = 0.9857
+  n=50: L_W = 0.9914
+
+E. Initial points shared across algorithms (seed 42 + r, r = 0..29, n = 10)
+  initial positions of PSO, JAYA, WFO and their FO variants identical in all 30 seeds: True
+  50-point ACOR / FO-ACOR archive contains these 30 points in all 30 seeds: True
+
+F. FO-PSO rate check on Sphere (Section 5.2.8): fitness ratio = squared distance rate
+  observed ratios (exp23): FO-PSO 0.847, PSO 0.872; quotient 0.971
+  mean-map rates 0.8092 / 0.8367: squared 0.655 / 0.700, quotient 0.935
+  mean-square rates 0.9374 / 0.9568: squared 0.879 / 0.916, quotient 0.960
+  almost-sure rates: see part B (quotient of squares printed below)
+  almost-sure quotient of squares from part B: 0.968; squared rates 0.768 / 0.793
+
+G. Direction of significant comparisons: median rule vs sign of the rank-biserial r (all suites and dimensions)
+  significant comparisons: 166; median direction equals sign of r: 166; exceptions: []

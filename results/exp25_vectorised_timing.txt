@@ -1,0 +1,15 @@
+Check 1: bit-identity on the shifted and rotated suite (n = 10 and 30, 3 runs per function)
+  60 paired runs: identical best value, best position and convergence curve
+
+Timing: mean wall-clock seconds per run (serial, interleaved), canonical suite
+  n=10 (300 paired runs, all bit-identical):
+    JAYA  0.104 s | FO-JAYA(0.5) loop 0.223 s (overhead 0.120 s, +115.4%) | vectorised 0.129 s (overhead 0.025 s, +24.5%) | overhead removed 79%
+    WFO   0.117 s | FO-WFO(0.5) loop 0.255 s (overhead 0.138 s, +118.6%) | vectorised 0.162 s (overhead 0.045 s, +38.8%) | overhead removed 67%
+  n=30 (50 paired runs, all bit-identical):
+    JAYA  0.109 s | FO-JAYA(0.5) loop 0.229 s (overhead 0.121 s, +111.0%) | vectorised 0.135 s (overhead 0.026 s, +24.2%) | overhead removed 78%
+    WFO   0.118 s | FO-WFO(0.5) loop 0.258 s (overhead 0.140 s, +117.8%) | vectorised 0.164 s (overhead 0.046 s, +38.6%) | overhead removed 67%
+  n=50 (50 paired runs, all bit-identical):
+    JAYA  0.114 s | FO-JAYA(0.5) loop 0.235 s (overhead 0.121 s, +106.5%) | vectorised 0.141 s (overhead 0.027 s, +23.5%) | overhead removed 78%
+    WFO   0.121 s | FO-WFO(0.5) loop 0.261 s (overhead 0.141 s, +116.6%) | vectorised 0.168 s (overhead 0.047 s, +39.0%) | overhead removed 67%
+
+cpu AMD Ryzen 9 9950X 16-Core Processor; platform Linux-6.8.0-124-generic-x86_64-with-glibc2.39; python 3.12.3; numpy 2.2.6; scipy 1.15.3
