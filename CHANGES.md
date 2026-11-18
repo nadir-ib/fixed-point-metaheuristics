@@ -31,5 +31,5 @@ C008 experiments/generate_figure2_convergence_R1.py: the panel titles of the top
 
 C009 new scripts, no change to `src/`: `experiments/exp25_vectorised_timing.py` (end-to-end runtime of FO-JAYA and FO-WFO
 with the memory terms computed once per iteration; the vectorised variants are subclasses defined in the script and are
-checked to be bit-identical to `src/` in every timed run) and `experiments/exp26_r1_council2_checks.py` (checks quoted in
+checked to be bit-identical to `src/` in every timed run) and `experiments/exp26_r1_verification_checks.py` (checks quoted in
 Sections 4.1.1, 4.3, 5.1.3, 5.2.8 and 5.2.10).

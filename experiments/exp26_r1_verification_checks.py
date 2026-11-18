@@ -1,5 +1,5 @@
 """
-R1 checks requested by the second verification round (07 Nov 2026); numbers quoted in Sections 4.1.1, 4.3, 5.1.3,
+Additional checks for the revised manuscript (R1), 07 Nov 2026; numbers quoted in Sections 4.1.1, 4.3, 5.1.3,
 5.2.8 and 5.2.10.
 A. Friedman test with the five functions as blocks (medians over 30 runs, floored at 1e-10), chi-square and the
    Iman-Davenport F statistic F = (N-1) chi2 / (N (k-1) - chi2), df (k-1, (k-1)(N-1)), N = 5 blocks, k = 8 methods
@@ -13,7 +13,7 @@ E. Initial points: for seed 42 + r the 30 initial positions of PSO, JAYA, WFO (a
 F. Rate check of Section 5.2.8: on Sphere the fitness is the squared distance, so fitness ratios are compared with
    squared rates (mean map, mean square, almost sure); observed ratios from results/exp23_text_numbers.txt.
 G. Direction rule: for every Holm-significant comparison, the median rule (Section 5.1.3) against the sign of r.
-Run from repo root: OMP_NUM_THREADS=1 python3 experiments/exp26_r1_council2_checks.py > results/exp26_r1_council2_checks.txt
+Run from repo root: OMP_NUM_THREADS=1 python3 experiments/exp26_r1_verification_checks.py > results/exp26_r1_verification_checks.txt
 """
 import os, sys
 os.environ.setdefault('OMP_NUM_THREADS', '1')
